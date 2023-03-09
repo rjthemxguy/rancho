@@ -7,9 +7,27 @@ export const RanchoPolyLayer = ({data}) => {
 
     const onEachClick = (feature, layer) => {
         const Precinct = feature.properties.PRECINCT;
-
+        const CLARK = feature.properties.CLARK;
+        const OLMSTED = feature.properties.OLMSTED;
+        const STICKLER = feature.properties.STICKLER;
+        const HANNAH = feature.properties.HANNAH;
+        const  HENDERSON= feature.properties.HENDERSON;
+        const  JIMENEZ= feature.properties.JIMENEZ;
+        
+        
         layer.bindPopup(
-           Precinct
+           "<b>" + "Precinct: " + Precinct + "</br>" + "</b>" +
+           "<hr>" + 
+
+           "Floyd Clark :" + CLARK + "</br>" +
+           "Rose Stephens Olmsted :" + OLMSTED + "</br>" +
+           "Ashley Stickler:" + STICKLER + "</br>" +
+           "Mary Hannah :" + HANNAH + "</br>" +
+           "Lawrence Henderson :" + HENDERSON + "</br>" +
+           "Erick Jimenez :" + JIMENEZ
+          
+
+           
             
           );
       
