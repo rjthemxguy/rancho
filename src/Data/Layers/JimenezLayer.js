@@ -1,7 +1,7 @@
 import { GeoJSON, LayersControl } from "react-leaflet";
 import { useRef, useEffect} from "react";
 
-export const RanchoPolyLayer = ({data}) => {
+export const JimenezLayer = ({data}) => {
 
     const geoJsonRef = useRef();
 
@@ -54,31 +54,31 @@ export const RanchoPolyLayer = ({data}) => {
 
       const precinctColor=((feature) => {
 
-        if(feature.properties.clarkPercent < 46 && feature.properties.clarkPercent > 40) {
+        if(feature.properties.jimenezPercent < 46 && feature.properties.jimenezPercent > 40) {
             return({color:"Peru"}) }
 
-        if(feature.properties.clarkPercent < 41 && feature.properties.clarkPercent > 35) {
+        if(feature.properties.jimenezPercent < 41 && feature.properties.jimenezPercent > 35) {
             return({color:"RoyalBlue"}) }
 
-        if(feature.properties.clarkPercent < 36 && feature.properties.clarkPercent > 30) {
+        if(feature.properties.jimenezPercent < 36 && feature.properties.jimenezPercent > 30) {
             return({color:"YellowGreen"}) }
         
-        if(feature.properties.clarkPercent < 31 && feature.properties.clarkPercent > 25) {
+        if(feature.properties.jimenezPercent < 31 && feature.properties.jimenezPercent > 25) {
             return({color:"red"}) }
 
-        if(feature.properties.clarkPercent < 26 && feature.properties.clarkPercent > 20) {
+        if(feature.properties.jimenezPercent < 26 && feature.properties.jimenezPercent > 20) {
             return({color:"aqua"}) }
 
-        if(feature.properties.clarkPercent < 21 && feature.properties.clarkPercent > 15) {
+        if(feature.properties.jimenezPercent < 21 && feature.properties.jimenezPercent > 15) {
             return({color:"orange"}) }
 
-        if(feature.properties.clarkPercent < 16 && feature.properties.clarkPercent > 10) {
+        if(feature.properties.jimenezPercent < 16 && feature.properties.jimenezPercent > 10) {
             return({color:"green"}) }
 
-        if(feature.properties.clarkPercent < 11 && feature.properties.clarkPercent > 5) {
+        if(feature.properties.jimenezPercent < 11 && feature.properties.jimenezPercent > 5) {
             return({color:"darkgray"}) }
 
-        if(feature.properties.clarkPercent < 6 && feature.properties.clarkPercent > 0) {
+        if(feature.properties.jimenezPercent < 6 && feature.properties.sticklerPercent > 0) {
             return({color:"maroon"}) }
 
         
@@ -92,7 +92,7 @@ export const RanchoPolyLayer = ({data}) => {
     ></GeoJSON>)
 
     return(
-        <LayersControl.Overlay checked name="Clark">{layer}</LayersControl.Overlay>
+        <LayersControl.Overlay name="Jimenez">{layer}</LayersControl.Overlay>
        
     )
 }

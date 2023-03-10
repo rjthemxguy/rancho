@@ -1,7 +1,7 @@
 import { GeoJSON, LayersControl } from "react-leaflet";
 import { useRef, useEffect} from "react";
 
-export const RanchoPolyLayer = ({data}) => {
+export const SticklerLayer = ({data}) => {
 
     const geoJsonRef = useRef();
 
@@ -54,31 +54,31 @@ export const RanchoPolyLayer = ({data}) => {
 
       const precinctColor=((feature) => {
 
-        if(feature.properties.clarkPercent < 46 && feature.properties.clarkPercent > 40) {
+        if(feature.properties.sticklerPercent < 46 && feature.properties.sticklerPercent > 40) {
             return({color:"Peru"}) }
 
-        if(feature.properties.clarkPercent < 41 && feature.properties.clarkPercent > 35) {
+        if(feature.properties.sticklerPercent < 41 && feature.properties.sticklerPercent > 35) {
             return({color:"RoyalBlue"}) }
 
-        if(feature.properties.clarkPercent < 36 && feature.properties.clarkPercent > 30) {
+        if(feature.properties.sticklerPercent < 36 && feature.properties.sticklerPercent > 30) {
             return({color:"YellowGreen"}) }
         
-        if(feature.properties.clarkPercent < 31 && feature.properties.clarkPercent > 25) {
+        if(feature.properties.sticklerPercent < 31 && feature.properties.sticklerPercent > 25) {
             return({color:"red"}) }
 
-        if(feature.properties.clarkPercent < 26 && feature.properties.clarkPercent > 20) {
+        if(feature.properties.sticklerPercent < 26 && feature.properties.sticklerPercent > 20) {
             return({color:"aqua"}) }
 
-        if(feature.properties.clarkPercent < 21 && feature.properties.clarkPercent > 15) {
+        if(feature.properties.sticklerPercent < 21 && feature.properties.sticklerPercent > 15) {
             return({color:"orange"}) }
 
-        if(feature.properties.clarkPercent < 16 && feature.properties.clarkPercent > 10) {
+        if(feature.properties.sticklerPercent < 16 && feature.properties.sticklerPercent > 10) {
             return({color:"green"}) }
 
-        if(feature.properties.clarkPercent < 11 && feature.properties.clarkPercent > 5) {
+        if(feature.properties.sticklerPercent < 11 && feature.properties.sticklerPercent > 5) {
             return({color:"darkgray"}) }
 
-        if(feature.properties.clarkPercent < 6 && feature.properties.clarkPercent > 0) {
+        if(feature.properties.sticklerPercent < 6 && feature.properties.sticklerPercent > 0) {
             return({color:"maroon"}) }
 
         
@@ -92,7 +92,7 @@ export const RanchoPolyLayer = ({data}) => {
     ></GeoJSON>)
 
     return(
-        <LayersControl.Overlay checked name="Clark">{layer}</LayersControl.Overlay>
+        <LayersControl.Overlay name="Stickler">{layer}</LayersControl.Overlay>
        
     )
 }
