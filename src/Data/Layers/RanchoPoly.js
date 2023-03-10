@@ -58,28 +58,28 @@ export const RanchoPolyLayer = ({data}) => {
             return({color:"Peru"}) }
 
         if(feature.properties.clarkPercent < 41 && feature.properties.clarkPercent > 35) {
-            return({color:"RoyalBlue"}) }
+            return({color:"RoyalBlue", fillOpacity: ".4"}) }
 
         if(feature.properties.clarkPercent < 36 && feature.properties.clarkPercent > 30) {
-            return({color:"YellowGreen"}) }
+            return({color:"YellowGreen", fillOpacity: ".4"}) }
         
         if(feature.properties.clarkPercent < 31 && feature.properties.clarkPercent > 25) {
-            return({color:"red"}) }
+            return({color:"red", fillOpacity: ".4"}) }
 
         if(feature.properties.clarkPercent < 26 && feature.properties.clarkPercent > 20) {
-            return({color:"aqua"}) }
+            return({color:"aqua", fillOpacity: ".4"}) }
 
         if(feature.properties.clarkPercent < 21 && feature.properties.clarkPercent > 15) {
-            return({color:"orange"}) }
+            return({color:"orange", fillOpacity: ".4"}) }
 
         if(feature.properties.clarkPercent < 16 && feature.properties.clarkPercent > 10) {
-            return({color:"green"}) }
+            return({color:"green",fillOpacity: ".4" }) }
 
         if(feature.properties.clarkPercent < 11 && feature.properties.clarkPercent > 5) {
-            return({color:"darkgray"}) }
+            return({color:"darkgray",fillOpacity: ".4" }) }
 
         if(feature.properties.clarkPercent < 6 && feature.properties.clarkPercent > 0) {
-            return({color:"maroon"}) }
+            return({color:"maroon",fillOpacity: ".4" }) }
 
         
     })

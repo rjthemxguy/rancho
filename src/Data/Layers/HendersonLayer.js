@@ -55,31 +55,31 @@ export const HendersonLayer = ({data}) => {
       const precinctColor=((feature) => {
 
         if(feature.properties.hendersonPercent < 46 && feature.properties.hendersonPercent > 40) {
-            return({color:"Peru"}) }
+            return({color:"Peru", fillOpacity: ".4"}) }
 
-        if(feature.properties.hendersonPercent < 41 && feature.properties.hendersonPercentt > 35) {
-            return({color:"RoyalBlue"}) }
+        if(feature.properties.hendersonPercent < 41 && feature.properties.hendersonPercent > 35) {
+            return({color:"RoyalBlue", fillOpacity: ".4"}) }
 
         if(feature.properties.hendersonPercent < 36 && feature.properties.hendersonPercent > 30) {
-            return({color:"YellowGreen"}) }
+            return({color:"YellowGreen", fillOpacity: ".4"}) }
         
         if(feature.properties.hendersonPercent < 31 && feature.properties.hendersonPercent > 25) {
-            return({color:"red"}) }
+            return({color:"red", fillOpacity: ".4"}) }
 
         if(feature.properties.hendersonPercent < 26 && feature.properties.hendersonPercent > 20) {
-            return({color:"aqua"}) }
+            return({color:"aqua", fillOpacity: ".4"}) }
 
         if(feature.properties.hendersonPercent < 21 && feature.properties.hendersonPercent > 15) {
-            return({color:"orange"}) }
+            return({color:"orange", fillOpacity: ".4"}) }
 
         if(feature.properties.hendersonPercent < 16 && feature.properties.hendersonPercent > 10) {
-            return({color:"green"}) }
+            return({color:"green", fillOpacity: ".4"}) }
 
         if(feature.properties.hendersonPercent < 11 && feature.properties.hendersonPercent > 5) {
-            return({color:"darkgray"}) }
+            return({color:"darkgray", fillOpacity: ".4"}) }
 
         if(feature.properties.hendersonPercent < 6 && feature.properties.hendersonPercent > 0) {
-            return({color:"maroon"}) }
+            return({color:"maroon",fillOpacity: ".4"}) }
 
         
     })

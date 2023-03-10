@@ -55,31 +55,31 @@ export const HannahLayer = ({data}) => {
       const precinctColor=((feature) => {
 
         if(feature.properties.hannahPercent < 46 && feature.properties.hannahPercent > 40) {
-            return({color:"Peru"}) }
+            return({color:"Peru", fillOpacity: ".4"}) }
 
-        if(feature.properties.hannahPercent < 41 && feature.properties.hannahPercentt > 35) {
-            return({color:"RoyalBlue"}) }
+        if(feature.properties.hannahPercent < 41 && feature.properties.hannahPercent > 35) {
+            return({color:"RoyalBlue" ,fillOpacity: ".4"}) }
 
         if(feature.properties.hannahPercent < 36 && feature.properties.hannahPercent > 30) {
-            return({color:"YellowGreen"}) }
+            return({color:"YellowGreen", fillOpacity: ".4"}) }
         
         if(feature.properties.hannahPercent < 31 && feature.properties.hannahPercent > 25) {
-            return({color:"red"}) }
+            return({color:"red", fillOpacity: ".4"}) }
 
         if(feature.properties.hannahPercent < 26 && feature.properties.hannahPercent > 20) {
-            return({color:"aqua"}) }
+            return({color:"aqua", fillOpacity: ".4"}) }
 
         if(feature.properties.hannahPercent < 21 && feature.properties.hannahPercent > 15) {
-            return({color:"orange"}) }
+            return({color:"orange", fillOpacity: ".4"}) }
 
         if(feature.properties.hannahPercent < 16 && feature.properties.hannahPercent > 10) {
-            return({color:"green"}) }
+            return({color:"green", fillOpacity: ".4"}) }
 
         if(feature.properties.hannahPercent < 11 && feature.properties.hannahPercent > 5) {
-            return({color:"darkgray"}) }
+            return({color:"darkgray", fillOpacity: ".4"}) }
 
         if(feature.properties.hannahPercent < 6 && feature.properties.hannahPercent > 0) {
-            return({color:"maroon"}) }
+            return({color:"maroon", fillOpacity: ".4"}) }
 
         
     })

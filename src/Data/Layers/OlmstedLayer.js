@@ -55,31 +55,31 @@ export const OlmstedLayer = ({data}) => {
       const precinctColor=((feature) => {
 
         if(feature.properties.olmstedPercent < 46 && feature.properties.olmstedPercent > 40) {
-            return({color:"Peru"}) }
+            return({color:"Peru", fillOpacity: ".4"}) }
 
         if(feature.properties.olmstedPercent < 41 && feature.properties.olmstedPercent > 35) {
-            return({color:"RoyalBlue"}) }
+            return({color:"RoyalBlue", fillOpacity: ".4"}) }
 
         if(feature.properties.olmstedPercent < 36 && feature.properties.olmstedPercent > 30) {
-            return({color:"YellowGreen"}) }
+            return({color:"YellowGreen", fillOpacity: ".4"}) }
         
         if(feature.properties.olmstedPercent < 31 && feature.properties.olmstedPercent > 25) {
-            return({color:"red"}) }
+            return({color:"red", fillOpacity: ".4"}) }
 
         if(feature.properties.olmstedPercent < 26 && feature.properties.olmstedPercent > 20) {
-            return({color:"aqua"}) }
+            return({color:"aqua", fillOpacity: ".4"}) }
 
         if(feature.properties.olmstedPercent < 21 && feature.properties.olmstedPercent > 15) {
-            return({color:"orange"}) }
+            return({color:"orange", fillOpacity: ".4"}) }
 
         if(feature.properties.olmstedPercent < 16 && feature.properties.olmstedPercent > 10) {
-            return({color:"green"}) }
+            return({color:"green", fillOpacity: ".4"}) }
 
         if(feature.properties.olmstedPercent < 11 && feature.properties.olmstedPercent > 5) {
-            return({color:"darkgray"}) }
+            return({color:"darkgray", fillOpacity: ".4"}) }
 
         if(feature.properties.olmstedPercent < 6 && feature.properties.sticklerPercent > 0) {
-            return({color:"maroon"}) }
+            return({color:"maroon", fillOpacity: ".4"}) }
 
         
     })

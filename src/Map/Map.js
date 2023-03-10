@@ -6,6 +6,7 @@ import { SticklerLayer } from "../Data/Layers/SticklerLayer.js";
 import { OlmstedLayer } from "../Data/Layers/OlmstedLayer.js";
 import { HannahLayer } from "../Data/Layers/HannahLayer";
 import { HendersonLayer } from "../Data/Layers/HendersonLayer";
+import { JimenezLayer } from "../Data/Layers/JimenezLayer";
 
 
 export const Map = () => {
@@ -26,6 +27,7 @@ export const Map = () => {
         <OlmstedLayer data={rancho}/>
         <HannahLayer data={rancho}/>
         <HendersonLayer data={rancho}/>
+        <JimenezLayer data={rancho}/>
         </LayersControl>
       </MapContainer>
     )

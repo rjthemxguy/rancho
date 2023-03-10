@@ -55,31 +55,31 @@ export const SticklerLayer = ({data}) => {
       const precinctColor=((feature) => {
 
         if(feature.properties.sticklerPercent < 46 && feature.properties.sticklerPercent > 40) {
-            return({color:"Peru"}) }
+            return({color:"Peru", fillOpacity: ".4"}) }
 
         if(feature.properties.sticklerPercent < 41 && feature.properties.sticklerPercent > 35) {
-            return({color:"RoyalBlue"}) }
+            return({color:"RoyalBlue", fillOpacity: ".4"}) }
 
         if(feature.properties.sticklerPercent < 36 && feature.properties.sticklerPercent > 30) {
-            return({color:"YellowGreen"}) }
+            return({color:"YellowGreen", fillOpacity: ".4"}) }
         
         if(feature.properties.sticklerPercent < 31 && feature.properties.sticklerPercent > 25) {
-            return({color:"red"}) }
+            return({color:"red", fillOpacity: ".4"}) }
 
         if(feature.properties.sticklerPercent < 26 && feature.properties.sticklerPercent > 20) {
-            return({color:"aqua"}) }
+            return({color:"aqua", fillOpacity: ".4"}) }
 
         if(feature.properties.sticklerPercent < 21 && feature.properties.sticklerPercent > 15) {
-            return({color:"orange"}) }
+            return({color:"orange", fillOpacity: ".4"}) }
 
         if(feature.properties.sticklerPercent < 16 && feature.properties.sticklerPercent > 10) {
-            return({color:"green"}) }
+            return({color:"green", fillOpacity: ".4"}) }
 
         if(feature.properties.sticklerPercent < 11 && feature.properties.sticklerPercent > 5) {
-            return({color:"darkgray"}) }
+            return({color:"darkgray",fillOpacity: ".4"}) }
 
         if(feature.properties.sticklerPercent < 6 && feature.properties.sticklerPercent > 0) {
-            return({color:"maroon"}) }
+            return({color:"maroon", fillOpacity: ".4"}) }
 
         
     })
