@@ -7,24 +7,31 @@ export const RanchoPolyLayer = ({data}) => {
 
     const onEachClick = (feature, layer) => {
         const Precinct = feature.properties.PRECINCT;
+
         const CLARK = feature.properties.CLARK;
+        const CLARKPERCENT = feature.properties.clarkPercent;
         const OLMSTED = feature.properties.OLMSTED;
+        const OLMSTEDPERCENT = feature.properties.olmstedPercent;
         const STICKLER = feature.properties.STICKLER;
+        const STICKLERPERCENT = feature.properties.sticklerPercent;
         const HANNAH = feature.properties.HANNAH;
-        const  HENDERSON= feature.properties.HENDERSON;
-        const  JIMENEZ= feature.properties.JIMENEZ;
+        const HANNAHPERCENT = feature.properties.hannahPercent;
+        const HENDERSON= feature.properties.HENDERSON;
+        const HENDERSONPERCENT = feature.properties.hendersonPercent;
+        const JIMENEZ= feature.properties.JIMENEZ;
+        const JIMENEZPERCENT = feature.properties.jimenezPercent;
         
         
         layer.bindPopup(
            "<b>" + "Precinct: " + Precinct + "</br>" + "</b>" +
            "<hr>" + 
 
-           "Floyd Clark :" + CLARK + "</br>" +
-           "Rose Stephens Olmsted :" + OLMSTED + "</br>" +
-           "Ashley Stickler:" + STICKLER + "</br>" +
-           "Mary Hannah :" + HANNAH + "</br>" +
-           "Lawrence Henderson :" + HENDERSON + "</br>" +
-           "Erick Jimenez :" + JIMENEZ
+           "Floyd Clark : " + CLARK + " : <b>" + CLARKPERCENT + "%" + "</b></br>" +
+           "Rose Stephens Olmsted : " + OLMSTED + " : <b>" + OLMSTEDPERCENT + "%" + "</b></br>" +
+           "Ashley Stickler: " + STICKLER + " : <b>" + STICKLERPERCENT + "%" + "</b></br>" +
+           "Mary Hannah :" + HANNAH + " : <b>" + HANNAHPERCENT + "%" + "</b></br>" +
+           "Lawrence Henderson : " + HENDERSON + " : <b>" + HENDERSONPERCENT + "%" + "</b></br>" +
+           "Erick Jimenez : " + JIMENEZ + " : <b>" + JIMENEZPERCENT + "%" + "</b>"
           
 
            
