@@ -52,9 +52,30 @@ export const RanchoPolyLayer = ({data}) => {
         
       };
 
+      const precinctColor=((feature) => {
+
+        if(feature.properties.clarkPercent < 36 && feature.properties.clarkPercent > 30) {
+            return({color:"blue"}) }
+
+        if(feature.properties.clarkPercent < 31 && feature.properties.clarkPercent > 25) {
+            return({color:"red"}) }
+
+        if(feature.properties.clarkPercent < 26 && feature.properties.clarkPercent > 20) {
+            return({color:"green"}) }
+
+        if(feature.properties.clarkPercent < 21 && feature.properties.clarkPercent > 10) {
+            return({color:"orange"}) }
+
+        if(feature.properties.clarkPercent < 10 && feature.properties.clarkPercent > 0) {
+            return({color:"white"}) }
+
+        
+    })
+
       const layer =  (<GeoJSON  data = {data}
         onEachFeature = {onEachClick}
         ref={geoJsonRef}
+        style = {precinctColor}
         
     ></GeoJSON>)
 
