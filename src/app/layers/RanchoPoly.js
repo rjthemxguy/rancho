@@ -9,9 +9,11 @@ import {
 
 export const RanchoPolyLayer = ({data}) => {
 
-    const dispatch = useDispatch()
+   
 
     const geoJsonRef = useRef();
+    const dispatch = useDispatch();
+    
 
     const onEachClick = (feature, layer) => {
 
@@ -39,7 +41,7 @@ const newData = {
 labels,
 datasets: [
   {
-    label: 'Votes',
+    label: '% of Vote Total',
     data: ["0", "",STICKLERPERCENT,HANNAHPERCENT, HENDERSONPERCENT, JIMENEZPERCENT],
     backgroundColor: ["red", "blue", "green", "orange", "yellow", "teal"]
   }
@@ -70,12 +72,15 @@ datasets: [
     }
 
     const handleFeatureClick = (e) => {
+
+        
+
         const labels = ["Clark", "Stickler", "Olmsted", "Hannah", "Henderson", "Jimenez"]
         const newData = {
             labels,
             datasets: [
               {
-                label: 'Votes',
+                label: '% of Vote Total',
                 data: [e.target.feature.properties.clarkPercent,
                     e.target.feature.properties.sticklerPercent,
                     e.target.feature.properties.olmstedPercent,
@@ -89,7 +94,7 @@ datasets: [
             };
             
             dispatch(setData(newData))
-        console.log(e.target.feature.properties.clarkPercent)
+        
         if (!geoJsonRef.current) return;
         geoJsonRef.current.resetStyle();
                           

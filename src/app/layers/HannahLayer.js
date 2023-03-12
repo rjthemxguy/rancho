@@ -1,9 +1,16 @@
 import { GeoJSON, LayersControl } from "react-leaflet";
 import { useRef, useEffect} from "react";
+import { useSelector, useDispatch } from 'react-redux';
+
+import {
+    setData,
+    selectCount,
+  } from "../chartSlice"
 
 export const HannahLayer = ({data}) => {
 
     const geoJsonRef = useRef();
+    const dispatch = useDispatch();
 
     const onEachClick = (feature, layer) => {
         const Precinct = feature.properties.PRECINCT;
@@ -43,6 +50,27 @@ export const HannahLayer = ({data}) => {
     }
 
     const handleFeatureClick = (e) => {
+
+        const labels = ["Clark", "Stickler", "Olmsted", "Hannah", "Henderson", "Jimenez"]
+        const newData = {
+            labels,
+            datasets: [
+              {
+                label: '% of Vote Total',
+                data: [e.target.feature.properties.clarkPercent,
+                    e.target.feature.properties.sticklerPercent,
+                    e.target.feature.properties.olmstedPercent,
+                    e.target.feature.properties.hannahPercent,
+                    e.target.feature.properties.hendersonPercent,
+                    e.target.feature.properties.jimenezPercent],
+                backgroundColor: ["red", "blue", "green", "orange", "yellow", "teal"]
+              }
+             
+            ],
+            };
+            
+            dispatch(setData(newData))
+
         if (!geoJsonRef.current) return;
         geoJsonRef.current.resetStyle();
                           

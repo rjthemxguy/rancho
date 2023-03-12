@@ -10,8 +10,8 @@ export const data = {
 labels,
 datasets: [
   {
-    label: 'Votes',
-    data: ["9", "9","9", "9", "9", "9"],
+    label: '% of Vote Total',
+    data: ["0", "0","0", "0", "0", "0"],
     backgroundColor: ["red", "blue", "green", "orange", "yellow", "teal"]
   }
  
