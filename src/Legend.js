@@ -1,14 +1,7 @@
 import React from 'react';
 import "./legend.css"
 
-const style1 = {
-content: "dsf",
-backgroundColor:"red", 
-left: "0",
-top: "0",
-width: "20px",
-height: "20px",
-marginRight: "5"}
+
 
 const Legend = () => {
     return (
