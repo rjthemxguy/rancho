@@ -5,7 +5,12 @@ import Legend from "./Legend"
 import BarChart from './BarChart';
 import "leaflet/dist/leaflet.css"
 import { Bar } from "react-chartjs-2"
+import { useSelector, useDispatch } from 'react-redux';
   
+import {
+  setData,
+  selectCount,
+} from "./app/chartSlice"
 
 export const options = {
   responsive: true,
@@ -22,29 +27,23 @@ export const options = {
   },
 };
 
-const labels = ["Clark", "Stickler", "Olmsted", "Hannah", "Henderson", "Jimenez"]
 
 
 
-export const data = {
-labels,
-datasets: [
-  {
-    label: 'Votes',
-    data: ["50", "10","70", "50", "30", "29"],
-    backgroundColor: ["red", "blue", "green"]
-  }
- 
-],
-};
+
 
 
 function App() {
+
+
+
+  const data = useSelector(selectCount);
+
   return (
     <>
-   <Map/>
+   <Map></Map>
    <Legend/>
-   
+  
    <BarChart data={data} options={options}/>
         
    </> 

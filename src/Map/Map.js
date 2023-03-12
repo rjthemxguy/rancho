@@ -1,12 +1,12 @@
 import { React } from "react";
 import {MapContainer, Popup, TileLayer, Marker, LayersControl} from "react-leaflet"
 import {rancho} from "../Data/Rancho"
-import { RanchoPolyLayer } from "../Data/Layers/RanchoPoly";
-import { SticklerLayer } from "../Data/Layers/SticklerLayer.js";
-import { OlmstedLayer } from "../Data/Layers/OlmstedLayer.js";
-import { HannahLayer } from "../Data/Layers/HannahLayer";
-import { HendersonLayer } from "../Data/Layers/HendersonLayer";
-import { JimenezLayer } from "../Data/Layers/JimenezLayer";
+import { RanchoPolyLayer } from "../app/layers/RanchoPoly";
+import { SticklerLayer } from "../app/layers/SticklerLayer.js";
+import { OlmstedLayer } from "../app//layers/OlmstedLayer.js";
+import { HannahLayer } from "../app/layers/HannahLayer";
+import { HendersonLayer } from "../app/layers/HendersonLayer";
+import { JimenezLayer } from "../app/layers/JimenezLayer";
 
 
 export const Map = () => {

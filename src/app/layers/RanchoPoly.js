@@ -1,11 +1,21 @@
 import { GeoJSON, LayersControl } from "react-leaflet";
 import { useRef, useEffect} from "react";
+import { useSelector, useDispatch } from 'react-redux';
+
+import {
+    setData,
+    selectCount,
+  } from "../chartSlice"
 
 export const RanchoPolyLayer = ({data}) => {
+
+    const dispatch = useDispatch()
 
     const geoJsonRef = useRef();
 
     const onEachClick = (feature, layer) => {
+
+   
         const Precinct = feature.properties.PRECINCT;
 
         const CLARK = feature.properties.CLARK;
@@ -21,6 +31,23 @@ export const RanchoPolyLayer = ({data}) => {
         const JIMENEZ= feature.properties.JIMENEZ;
         const JIMENEZPERCENT = feature.properties.jimenezPercent;
         
+        const labels = ["Clark", "Stickler", "Olmsted", "Hannah", "Henderson", "Jimenez"]
+
+
+
+const newData = {
+labels,
+datasets: [
+  {
+    label: 'Votes',
+    data: ["0", "",STICKLERPERCENT,HANNAHPERCENT, HENDERSONPERCENT, JIMENEZPERCENT],
+    backgroundColor: ["red", "blue", "green", "orange", "yellow", "teal"]
+  }
+ 
+],
+};
+
+
         
         layer.bindPopup(
            "<b>" + "Precinct: " + Precinct + "</br>" + "</b>" +
@@ -37,12 +64,32 @@ export const RanchoPolyLayer = ({data}) => {
            
             
           );
-      
+         
           layer.on({ click: handleFeatureClick });     
 
     }
 
     const handleFeatureClick = (e) => {
+        const labels = ["Clark", "Stickler", "Olmsted", "Hannah", "Henderson", "Jimenez"]
+        const newData = {
+            labels,
+            datasets: [
+              {
+                label: 'Votes',
+                data: [e.target.feature.properties.clarkPercent,
+                    e.target.feature.properties.sticklerPercent,
+                    e.target.feature.properties.olmstedPercent,
+                    e.target.feature.properties.hannahPercent,
+                    e.target.feature.properties.hendersonPercent,
+                    e.target.feature.properties.jimenezPercent],
+                backgroundColor: ["red", "blue", "green", "orange", "yellow", "teal"]
+              }
+             
+            ],
+            };
+            
+            dispatch(setData(newData))
+        console.log(e.target.feature.properties.clarkPercent)
         if (!geoJsonRef.current) return;
         geoJsonRef.current.resetStyle();
                           
